@@ -1,7 +1,7 @@
 <div class="row">
   <ng-container *ngIf="blogs">
     <ng-container *ngFor="let blog of blogs">
-      <app-blog-card [blog]="blog" class="col-4"></app-blog-card>
+      <app-blog-card [blog]="blog" class="col-sm-12 col-md-4"></app-blog-card>
     </ng-container>
   </ng-container>
   <ng-container *ngIf="!blogs || blogs.length == 0">
