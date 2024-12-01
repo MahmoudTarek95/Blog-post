@@ -1,15 +1,14 @@
-<div class="card">
-  <img class="card-img-top" src="assets/imgs/test.jpg" alt="Card image cap">
+<div class="card" (click)="goToDetails(blog.id)">
+  <img class="card-img-top" width="336px" height="240px" [src]="blog.cover_image ?  blog.cover_image : 'assets/imgs/test.jpg'" alt="Card image cap">
   <div class="card-body">
     <h6 class="card-type">Design</h6>
-    <h5 class="card-title">UX review presentations</h5>
-    <p class="card-text">How do you create compelling presentations that wow your colleagues and impress your managers?</p>
-    <div class="auther">
-      <img class="auther-img" src="assets/imgs/auther.png" alt="" sizes="" srcset="">
-      <div class="auther-details">
-        <div class="name">Mahmoud</div>
-        <div class="date">20 Jan 2022</div>
-      </div>
+    <h5 class="card-title">{{blog.title}}</h5>
+  </div>
+  <div class="auther">
+    <img class="auther-img" [src]="blog.user.profile_image" alt="" sizes="" srcset="">
+    <div class="auther-details">
+      <div class="name">{{blog.user.name}}</div>
+      <div class="date">{{blog.readable_publish_date}}</div>
     </div>
   </div>
 </div>

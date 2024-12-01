@@ -1,0 +1,22 @@
+<div class="row">
+  <ng-container *ngIf="blogs">
+    <ng-container *ngFor="let blog of blogs">
+      <app-blog-card [blog]="blog" class="col-4"></app-blog-card>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="!blogs || blogs.length == 0">
+    <app-empty-status></app-empty-status>
+  </ng-container>
+
+  <div class="paginations" *ngIf="blogs && blogs.length != 0">
+    <ngb-pagination
+    (pageChange)="getPageFromService($event)"
+    [pageSize]="6"
+    [(page)]="page"
+    [rotate]="true"
+    [collectionSize]="30"
+    [boundaryLinks]="true"
+    >
+    </ngb-pagination>
+  </div>
+</div>

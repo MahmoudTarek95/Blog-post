@@ -1,0 +1,7 @@
+<ng-container *ngIf="blog">
+
+  <app-blog-card [blog]="blog"></app-blog-card>
+</ng-container>
+<ng-container *ngIf="!blog">
+  <app-empty-status></app-empty-status>
+</ng-container>
