@@ -1,0 +1,46 @@
+@import 'src/styles';
+
+.card{
+  .card-body{
+    padding: 20px 0;
+  }
+  margin-top: 25px;
+  padding: 24px;
+  .card-type{
+    color: $primary-color;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .card-title{
+    color: $card-main-title-color;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .card-text{
+    color: #667085;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .auther{
+    display: flex;
+    .auther-img{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .auther-details{
+      .name{
+        color:$card-main-title-color;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .date{
+        color: $card-main-title-color;
+        font-size: 14px;
+        font-weight: 400;
+        color: #667085;
+      }
+    }
+  }
+}
